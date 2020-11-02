@@ -43,6 +43,10 @@ const indexRouter = require("./routes/index");
 // 1.index router/controller---------------------------
 app.use('/',indexRouter);
 
+// author router
+const authorRouter = require("./routes/author");
+app.use('/authors',authorRouter);
+
 // env variablebol huzza ki ahova deployoljuk 
 // a server fogja megmondani melyik porton halgatunk nem mi fontsuk el
 app.listen(process.env.PORT || 3000);
