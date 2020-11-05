@@ -2,6 +2,10 @@ const express = require("express");
 const app = express();
 const expressLayouts = require("express-ejs-layouts");
 
+// body parser
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({limit:"10mb",extended:false}));
+
 if(process.env.NODE_ENV !=="production"){
     // be loadoljuk az env variablet az .env filebol
       require('dotenv').config();

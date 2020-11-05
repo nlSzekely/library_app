@@ -6,10 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    before
+    <%- include("../partials/header.ejs") %>
+    <%- include("../partials/errorMsg.ejs") %>
+
     <hr>
     <%- body  %> 
     <hr>
-    after
+    
 </body>
 </html>
